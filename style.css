@@ -1,0 +1,500 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Gluten:wght@100..900&family=Lemonada:wght@300..700&family=Kanit:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif:wght@100..900&family=Roboto:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+
+:root {
+    /* Privary color shades */
+    --primary-clr: #006dda;
+    --primary-transparent-03: #0083da48;
+    --primary-transparent-05: #da00c182;
+    --primary-transparent-07: #da00c1b9;
+    /* Light color shades */
+    --light: #ffffff;
+    --light-50: #f9f9f9;
+    --light-100: #f2f2f2;
+    --light-200: #e6e6e6;
+    --light-300: #cccccc;
+    --light-400: #b3b3b3;
+    --light-500: #999999;
+    --light-600: #808080;
+    --light-700: #666666;
+    --light-800: #4d4d4d;
+    --light-900: #333333;
+    /* Dark color shades */
+    --dark: #000000;
+    --dark-50: #1a1a1a;
+    --dark-100: #262626;
+    --dark-200: #333333;
+    --dark-300: #404040;
+    --dark-400: #4d4d4d;
+    --dark-500: #595959;
+    --dark-600: #666666;
+    --dark-700: #737373;
+    --dark-800: #808080;
+    --dark-900: #8c8c8c;
+    /* Border variables */
+    --border-thin: var(--border-xxs) solid;
+    --border-medium: var(--border-m) solid;
+    --border-large: var(--border-l) solid;
+    /* Border radius variables */
+    --border-xxs: 1px;
+    --border-xs: 2px;
+    --border-s: 4px;
+    --border-m: 8px;
+    --border-l: 12px;
+    --border-xl: 24px;
+    --border-xxl: 44px;
+    --border-rounded: 50%;
+    /* Border color variables */
+    --border-light: var(--light-300);
+    --border-dark: var(--dark-300);
+
+    /* Size variable */
+    --full-size: 100%;
+    --helf-size: 50%;
+    --full-size-h: 100vh;
+    --full-size-w: 100vw;
+    --full-width: var(--full-size);
+    --full-height: var(--full-size);
+    --width-vh: var(--full-size-h);
+    --height-vw: var(--full-size-w);
+
+    /* Font family variable */
+    --roboto: "Roboto", sans-serif;
+    --noto-serif: "Noto Serif", serif;
+    --kanit: "Kanit", sans-serif;
+    --inter: "Inter", sans-serif;
+    --lemonada: "Lemonada", cursive;
+    --gluten: "Gluten", cursive;
+    --ubunto: "Ubunto", sans-serif;
+    --default-font: var(--roboto);
+}
+
+:root[dark-theme="true"] {
+    /* Light color shades */
+    --dark: #ffffff;
+    --dark-50: #f9f9f9;
+    --dark-100: #f2f2f2;
+    --dark-200: #e6e6e6;
+    --dark-300: #cccccc;
+    --dark-400: #b3b3b3;
+    --dark-500: #999999;
+    --dark-600: #808080;
+    --dark-700: #666666;
+    --dark-800: #4d4d4d;
+    --dark-900: #333333;
+    /* Dark color shades */
+    --light: #000000;
+    --light-50: #1a1a1a;
+    --light-100: #262626;
+    --light-200: #333333;
+    --light-300: #404040;
+    --light-400: #4d4d4d;
+    --light-500: #595959;
+    --light-600: #666666;
+    --light-700: #737373;
+    --light-800: #808080;
+    --light-900: #8c8c8c;
+}
+
+:root[default-font="roboto"]{
+    --default-font: var(--roboto);
+}
+:root[default-font="noto-serif"]{
+    --default-font: var(--noto-serif);
+}
+:root[default-font="kanit"]{
+    --default-font: var(--kanit);
+}
+:root[default-font="inter"]{
+    --default-font: var(--inter);
+}
+:root[default-font="lemonada"]{
+    --default-font: var(--lemonada);
+}
+:root[default-font="gluten"]{
+    --default-font: var(--gluten);
+}
+:root[default-font="ubunto"]{
+    --default-font: var(--ubunto);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 300ms ease-in-out;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span {
+    /* display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    */
+    overflow: hidden; 
+}
+
+*::-webkit-scrollbar {
+    width: 0.2rem;
+    height: 0.2rem;
+    background: var(--light);
+}
+
+*::-webkit-scrollbar-thumb {
+    border-radius: var(--border-xl);
+    background: var(--dark);
+}
+
+html {
+    font-family: var(--default-font);
+    user-select: auto;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--light);
+}
+
+input {
+    border: 0;
+    outline: 0;
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+button {
+    user-select: none;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+button[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.container {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.container header{
+    position: sticky;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 1;
+    width: var(--full-width);
+    height: auto;
+    padding: 1rem 0;
+    gap: 1rem;
+    background: var(--light);
+}
+
+.container svg{
+    min-width: 30px;
+}
+
+.container header .input-wrapper{
+    background: var(--light-100);
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: var(--border-m);
+}
+
+.container header .input-wrapper input{
+    background: transparent;
+    width: var(--full-width);
+    height: 35px;
+    color: var(--dark-300);
+    font-size: 0.9rem;
+    padding: 0 1rem;
+}
+
+.container header .input-wrapper input:focus ~ button{
+    background: var(--light-200);
+}
+
+.container header .input-wrapper button{
+    height: 35px;
+    max-height: 35px;
+    width: 50px;
+    display: grid;
+    place-items: center;
+    color: var(--dark-200);
+    cursor: pointer;
+}
+
+
+.container header .right-side{
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.container header .right-side button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 35px;
+    gap: 0.4rem;
+    height: 35px;
+    background: var(--light-100);
+    border-radius: var(--border-m);
+    padding: 0rem 0.5rem;
+    align-items: center;
+    color: var(--dark-100);
+    cursor: pointer;
+}
+
+.container header .right-side button:hover{
+    background: var(--light-200);
+}
+
+.container header .right-side button:active{
+    background: var(--light-300);
+}
+
+.container header .right-side button span{
+    text-transform: capitalize;
+    font-family: var(--default-font);
+}
+
+.container header .right-side button.toggle-theme-button{
+    width: 35px;
+    padding: 0;
+    font-size: 1.1rem
+}
+
+.container header .right-side button.toggle-theme-button i{
+    display: none;
+}
+
+.container header .right-side button.toggle-theme-button[dark="false"] i.fa-moon,
+.container header .right-side button.toggle-theme-button[dark="true"] i.fa-sun{
+    display: block;
+}
+
+
+.container header .right-side button .font-dropdown{
+    position: absolute;
+    top: 110%;
+    width: var(--full-width);
+    padding: 0.5rem;
+    background: var(--light-100);
+    overflow: hidden;
+    border-radius: var(--border-m);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+
+.container header .right-side button .font-dropdown[dropdown-active="true"]{
+    display: flex;
+}
+
+.container header .right-side button .font-dropdown li{
+    font-size: 0.8rem;
+    padding: 0.2rem;
+    font-weight: 600;
+    width: var(--full-width);
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-s);
+}
+
+.container header .right-side button .font-dropdown li:hover{
+    background: var(--light-300);
+}
+
+.container header .right-side button .font-dropdown li:nth-child(1){
+    font-family: var(--roboto);
+}
+.container header .right-side button .font-dropdown li:nth-child(2){
+    font-family: var(--noto-serif);
+}
+.container header .right-side button .font-dropdown li:nth-child(3){
+    font-family: var(--kanit);
+}
+.container header .right-side button .font-dropdown li:nth-child(4){
+    font-family: var(--inter);
+}
+.container header .right-side button .font-dropdown li:nth-child(5){
+    font-family: var(--lemonada);
+}
+.container header .right-side button .font-dropdown li:nth-child(6){
+    font-family: var(--gluten);
+}
+.container header .right-side button .font-dropdown li:nth-child(7){
+    font-family: var(--ubunto);
+}
+
+.container header .right-side button span{
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.container main{
+    position: relative;
+    width: var(--full-width);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    padding-bottom: 2rem;
+    z-index: 0;
+    background: var(--light-50);
+    border: 1px solid var(--light-300);
+    border-radius: var(--border-m);
+    margin-bottom: 2rem;
+}
+
+.container main .not-found{
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 400px;
+}
+
+.container main .not-found p{
+    color: var(--dark-300);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.container main .word-title-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--light-300);
+}
+
+.container main .word-title-wrapper .left-side{
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .word-title-wrapper .left-side .word{
+    font-size: 2rem;
+    color: var(--dark-200);
+    font-weight: 700;
+}
+
+.container main .word-title-wrapper .left-side .phonetic{
+    font-size: 0.8rem;
+    color: var(--dark-600);
+    font-weight: 600;
+}
+
+.container main .word-title-wrapper .button-paly{
+    /* margin-top: 1rem; */
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    display: grid;
+    place-content: center;
+    border-radius: var(--border-rounded);
+    background: var(--primary-transparent-03);
+    cursor: pointer;
+}
+
+.container main .word-title-wrapper .button-paly i{
+    font-size: 1rem;
+    color: var(--primary-clr);
+}
+.container main .word-category-wrapper{
+    margin-top: 1rem;
+}
+
+.container main .word-category-wrapper,
+.container main .word-category-wrapper .category-wrapper{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.container main .word-category-wrapper .category-wrapper .part-of-speech{
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-clr);
+    text-transform: capitalize;
+    margin-bottom: 0.8rem;
+}
+
+
+.container main .word-category-wrapper .category-wrapper .definations-list{
+    margin-bottom: 0.8rem;
+    padding-left: 0.5rem;
+}
+
+.container main .word-category-wrapper .category-wrapper .definations-list li{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+    margin-bottom: 1rem;
+}
+
+.container main .word-category-wrapper .category-wrapper .definations-list li:last-child{
+    margin-bottom: 0;
+}
+
+.container main .word-category-wrapper .category-wrapper .definations-list li p{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--dark-400);
+}
+.container main .word-category-wrapper .category-wrapper .definations-list li span{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--dark-600);
+}
+
+.container main .word-category-wrapper .category-wrapper .synon-anton-lists{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+}
+
+.container main .word-category-wrapper .category-wrapper .synon-anton-lists .title{
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--dark-700);
+}
+
+.container main .word-category-wrapper .category-wrapper .synon-anton-lists .example{
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--primary-clr);
+}
+
+@media (max-width: 450px) {
+    .container header{
+        flex-wrap: wrap;
+    }
+    .container header .input-wrapper{
+        order: 1;
+        width: var(--full-width);
+    }
+}
