@@ -1,5 +1,7 @@
 # Dictionary App
 
+Live: [here](https://gp-dictionary-app.netlify.app)
+
 A sleek and modern dictionary web application that allows users to search for words and get detailed information including definitions, phonetics, synonyms, antonyms, and example sentences. The application also features a dark mode toggle and font selection for enhanced user experience.
 
 ## Features
