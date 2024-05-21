@@ -61,8 +61,8 @@ You need a modern web browser to run this application.
 
 ## Screenshots
 
-![Light Mode](screenshots/light-mode.png)
-![Dark Mode](screenshots/dark-mode.png)
+![Light Mode](screenshots/light-mode.jpeg)
+![Dark Mode](screenshots/dark-mode.jpeg)
 
 ## License
 
